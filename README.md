@@ -1,11 +1,7 @@
-Tutorial 0A - PC Screen Font
+GT-MOS
 ============================
 
-Drawing pixmaps is fun, but definitely there's a need to display characters as well. Basicaly fonts
-are nothing more than bitmaps for each character. For this tutorial I choosed PC Screen Font format,
-the same Linux Console uses.
-
-UPDATE: because I had many requests, I've added demonstration on how to print UTF-8 strings.
+More to come!
 
 Lfb.h, lfb.c
 ------------
