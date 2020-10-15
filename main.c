@@ -21,6 +21,12 @@ void kprintf(char *str){
 	line += 1;	
 }
 
+void kPrintfInfo(){
+	char *str;
+	sprintf(str, "Welcome to GT-MOS, type `help` for help.",0);
+	lfb_proprint(0, line*h, str);
+	line += 1;	
+}
 
 void main()
 {
@@ -96,7 +102,7 @@ void main()
 	lfb_print(0, 4*h, str);
 
 	line = 0;
-	kprintf("Welcome to GT-MOS!");
+	kPrintfInfo();
 	
 	while(1) {
 		kprintf("root@pi / $ "); //// Read the keyboard here \\\\
