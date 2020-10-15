@@ -108,7 +108,7 @@ void main()
 		kprintf("root@pi / $ "); //// Read the keyboard here \\\\
 		
 		if(line >= 50){ // Just to clear the screen for scrolling
-			line = 0
+			line = 0;
 			for (int i = 0; i < 50; i++) {
 				char *str = "                                                                                                ";
 				lfb_print(0, i*h, str);				
