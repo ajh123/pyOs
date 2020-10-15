@@ -92,6 +92,8 @@ void main()
 		lfb_proprint(0, 2*h, "Unable to find serial number");
 	}
 
+	wait_msec(1000000);
+
 	char *str = "                                ";
 	lfb_print(0, 0*h, str);
 	lfb_print(0, 1*h, str);
@@ -103,9 +105,8 @@ void main()
 	kPrintfInfo();
 	
 	while(1) {
-		kprintf("root@pi / $ "); //// Read the keyboard here \\\\
+		kprintf("root@pi / $"); //// Read the keyboard here \\\\
 		
-		wait_msec(1000000);
 		if(line >= 50){ // Just to clear the screen for scrolling
 			line = 0;
 			for (int i = 0; i < 50; i++) {
@@ -114,7 +115,7 @@ void main()
 			}	
 				
 		}
-		
+				
 		// echo everything back
 		c=uart_getc();
 		uart_send(c);
