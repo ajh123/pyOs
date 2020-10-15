@@ -22,9 +22,7 @@ void kprintf(char *str){
 }
 
 void kPrintfInfo(){
-	char *str;
-	sprintf(str, "Welcome to GT-MOS, type `help` for help.",0);
-	lfb_proprint(0, line*h, str);
+	lfb_proprint(0, line*h, "Welcome to GT-MOS, type 'help' for help.");
 	line += 1;	
 }
 
@@ -107,6 +105,7 @@ void main()
 	while(1) {
 		kprintf("root@pi / $ "); //// Read the keyboard here \\\\
 		
+		wait_msec(1000000);
 		if(line >= 50){ // Just to clear the screen for scrolling
 			line = 0;
 			for (int i = 0; i < 50; i++) {
